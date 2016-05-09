@@ -1,4 +1,4 @@
-import AppDispatcher from '/AppDispatcher';
+import AppDispatcher from './AppDispatcher';
 import bankConstants from './constants';
 
 let BankActions = {
@@ -11,12 +11,12 @@ let BankActions = {
     
     depositIntoAccount(amount){
         AppDispatcher.dispatch({
-            type: bankConstants.WITHDREW_FROM_ACCOUNT,
+            type: bankConstants.DEPOSITED_INTO_ACCOUNT,
             amount: amount
         });
     },
     
-    withDrawFromAccount(amount){
+    withdrawFromAccount(amount){
         AppDispatcher.dispatch({
            type: bankConstants.WITHDREW_FROM_ACCOUNT,
            amount: amount 
